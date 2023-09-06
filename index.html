@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Ntuthuko Likhanyile Sokutu - Portfolio</title>
      <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Latto", sans-serif;
             margin: 0;
             padding: 0;
         }
@@ -15,11 +16,12 @@
             padding: 10px;
             text-align: center;
             position: fixed;
-            width : 100%
+            width: 100%;
         }
 
         header h1 {
             margin: 0;
+            font-family: 'Latto', sans-serif; /* Use the Latto font */
         }
 
         header ul {
@@ -39,19 +41,28 @@
 
         section {
             padding: 20px;
-            
         }
 
         section h2 {
             margin-top: 100px;
+            background-color: #333;
+            color: rgb(128, 110, 144);
         }
 
         img {
-            border-radius: 50%;
-            max-width: 200px;
+            border-radius: 25%;
+            max-width: 300px;
+            max-height: 300px;
             height: auto;
             display: block;
             margin: 0 auto;
+        }
+
+        .about-content {
+            text-align: center;
+            margin: 0 auto;
+            max-width: 600px;
+            padding: 20px;
         }
 
         footer {
@@ -64,6 +75,7 @@
             width: 100%;
         }
     </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Latto:wght@300&display=swap">
 </head>
 <body>
     <header>
@@ -72,20 +84,18 @@
             <li><a href="#about">About Me</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#contactdetails">Contact Details</a></li>
+            <li><a href="#contacts">Contacts</a></li>
         </ul>
     </header>
 
-   
     <section id="about">
         <h2>About Me</h2>
-        <img src="https://drive.google.com/uc?export=view&id=1MrlNvLhfzW5Ai2Aa0Wz_9c9ca59of8lf" alt="Ntuthuko Likhanyile Sokutu">
-        <p>🌐 FullStack Web Dev Recruit | Bridging Education & Tech | Eager Learner 🚀
-            <p>📚 Bridging Gaps | 💡 Empowering Minds | 💻 Shaping Tech for Change</p>
-            
-            <p>Passionate Umuzi.Org recruit fueling education, tech, and finance convergence.</p> 
-            <p>Rapid learner, poised to empower the world through innovation.</p>
-        </p>
+        <div class="about-content">
+            <img src="https://drive.google.com/uc?export=view&id=1MrlNvLhfzW5Ai2Aa0Wz_9c9ca59of8lf" alt="Ntuthuko Likhanyile Sokutu">
+            <p>A full stack web development recruit with a penchant for learning new skills quickly, 
+                and sharing that knowledge with my fellow team mates. All about the team rather than the individual. 
+                Great at making the right connections timeously. </p>
+        </div>
     </section>
 
     <section id="skills">
@@ -99,15 +109,14 @@
     <section id="projects">
         <h2>Projects</h2>
         <div>
-            <h3>Student Journey Blog</h3>
-            <p>From time to time I share insights related to what I have learnt during my Umuzi learnership</p>
-            <a href="https://medium.com/@ntuthukoS">Blog</a>
+            <p>Blog: <a href="https://medium.com/@ntuthukoS">My Journey To Becoming A Fullstack Web Developer</a></p>
         </div>
     </section>
 
-    <section id="contact">
+    <section id="contacts">
         <h2>Contacts</h2>
         <p>LinkedIn: <a href="https://www.linkedin.com/in/ntuthuko-sokutu-449a44273/">My Profile</a></p>
+        <p>Resume: <a href="https://drive.google.com/file/d/1OfQ2TppSIjbUJeemfE7oD3ScxJHPg2Gq/view?usp=sharing">Ntuthuko Sokutu</a></p>
     </section>
 
     <footer>
@@ -115,3 +124,4 @@
     </footer>
 </body>
 </html>
+
