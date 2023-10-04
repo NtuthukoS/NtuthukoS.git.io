@@ -2,142 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ntuthuko Likhanyile Sokutu - Portfolio</title>
-     <style>
-        :root {
-            --clr-primary-5: #3f0606;
-        }
-
-        body {
-            font-family: "Latto", sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(19deg, #CCFFFF, #3f0606);
-        }
-
-        header {
-            background-color: #333;
-            color: rgb(128, 110, 144);
-            padding: 10px;
-            text-align: center;
-            position: fixed;
-            width: 100%;
-            z-index: 1; 
-        }
-
-        header h1 {
-            margin: 0;
-            font-family: 'Latto', sans-serif; 
-        }
-
-        header ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        header ul li {
-            display: inline;
-            margin-right: 15px;
-        }
-
-        header ul li a {
-            text-decoration: none;
-            color: white;
-        }
-
-        section {
-            padding: 19px;
-        }
-
-        section h2 {
-            margin-top: 100px;
-            background-color: #333;
-            color: rgb(128, 110, 144);
-        }
-
-        .about-content{
-            text-align: center;
-        }
-
-        .img-container {
-            position: relative;
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            margin: 160px auto 1.5rem auto; 
-            overflow: hidden;
-            border: 2px solid var(--clr-primary-5);
-            animation: fadeIn 2s ease-in-out forwards;
-        }
-
-        #person-img {
-            width: 100%;
-            display: block;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 50%;
-            position: relative;
-            animation: fadeIn 2s ease-in-out forwards
-        }
-
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-
-    </style>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Latto:wght@300&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap">
 </head>
 <body>
     <header>
         <h1>Ntuthuko Likhanyile Sokutu</h1>
-        <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contacts">Contacts</a></li>
-        </ul>
     </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <div class="about-content">
-            <div class="img-container">
+    <main class="main-container">
+        <div class="left-panel">
+            <div class="circle">
                 <img id="person-img" src="https://drive.google.com/uc?export=view&id=1MrlNvLhfzW5Ai2Aa0Wz_9c9ca59of8lf" alt="Ntuthuko Likhanyile Sokutu">
             </div>
-            <hr>
-            <p><strong>A full stack web development recruit with a penchant for learning new skills quickly, 
-                and sharing that knowledge with my fellow team mates. All about the team rather than the individual. 
-                Great at making the right connections timeously.</strong> </p>
-            <hr>
         </div>
-    </section>
-
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Programming Languages: Javascript, HTML5, CSS</li>
-            <li>Tools: Git, Visual Studio Code, Bash</li>
-        </ul>
-    </section>
-
-    <section id="projects">
-        <h2>Projects</h2>
-        <div>
-            <p>Blog: <a href="https://medium.com/@ntuthukoS" target="_blank">My Journey To Becoming A Fullstack Web Developer</a></p>
+        <div class="center-panel">
+            <!-- Content for each section goes here -->
+            <h2>About Me <h2>
+            <div class="section-content about" id="about-content">
+                <p><strong>A full stack web development recruit with a penchant for learning new skills quickly, 
+                    and sharing that knowledge with my fellow team mates. All about the team rather than the individual. 
+                    Great at making the right connections timeously.</strong></p>
+            </div>
+            <div class="section-content skills" id="skills-content">
+                <h2>Skills</h2>
+                <ul>
+                    <li>Programming Languages: JavaScript, HTML5, CSS</li>
+                    <li>Tools: Git, Visual Studio Code, Bash</li>
+                </ul>
+            </div>
+            <div class="section-content projects" id="projects-content">
+                <h2>Projects</h2>
+                <p>Blog: <a href="https://medium.com/@ntuthukoS" target="_blank">My Journey To Becoming A Fullstack Web Developer</a></p>
+            </div>
+            <div class="section-content contacts" id="contacts-content">
+                <h2>Contacts</h2>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/ntuthuko-sokutu-449a44273/" target="_blank">My Profile</a></p>
+                <p>Resume: <a href="https://drive.google.com/file/d/1OfQ2TppSIjbUJeemfE7oD3ScxJHPg2Gq/view?usp=sharing" target="_blank">Ntuthuko Sokutu</a></p>
+            </div>
         </div>
-    </section>
-
-    <section id="contacts">
-        <h2>Contacts</h2>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/ntuthuko-sokutu-449a44273/" target="_blank">My Profile</a></p>
-        <p>Resume: <a href="https://drive.google.com/file/d/1OfQ2TppSIjbUJeemfE7oD3ScxJHPg2Gq/view?usp=sharing" target="_blank">Ntuthuko Sokutu</a></p>
-    </section>
+    </main>
 
     <footer>
         <p>&copy; 2023 Ntuthuko. All rights reserved.</p>
     </footer>
+</body>
+</html>
