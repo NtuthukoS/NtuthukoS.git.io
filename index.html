@@ -6,6 +6,7 @@
     <title>Ntuthuko Likhanyile Sokutu - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
     <header>
@@ -17,34 +18,59 @@
             <div class="circle">
                 <img id="person-img" src="https://drive.google.com/uc?export=view&id=1MrlNvLhfzW5Ai2Aa0Wz_9c9ca59of8lf" alt="Ntuthuko Likhanyile Sokutu">
             </div>
+            <div class="social-icons">
+                <a href="https://github.com/NtuthukoS" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+                <a href="https://www.linkedin.com/in/ntuthuko-sokutu-449a44273/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+                <a href="mailto:ntuthuko.sokutu@umuzi.org"><i class="fas fa-envelope fa-2x"></i></a>
+                <a href="tel:+27662720653"><i class="fas fa-phone fa-2x"></i></a>
+            </div>
+            <div class="help-box">
+                <h2>What Can I Help You With Today?</h2>
+                <textarea id="help-text" rows="4" placeholder="Specify the web services you need (e.g., web design, backend architecture, etc.)"></textarea>
+                <button id="send-button">Send</button>
+            </div>
         </div>
         <div class="center-panel">
-            <!-- Content for each section goes here -->
             <h2>About Me</h2>
             <div class="section-content about" id="about-content">
-                <p><strong>A full stack web development recruit with a penchant for learning new skills quickly, and sharing that knowledge with my fellow team mates. All about the team rather than the individual. Great at making the right connections timeously.</strong></p>
+                <p><strong>A full stack web development recruit with a penchant for learning new skills quickly and sharing that knowledge with my fellow team mates. All about the team rather than the individual. Great at making the right connections timeously.</strong></p>
             </div>
             <div class="section-content skills" id="skills-content">
                 <h2>Skills</h2>
-                <ul>
-                    <li>Programming Languages: JavaScript, HTML5, CSS</li>
-                    <li>Tools: Git, Visual Studio Code, Bash</li>
-                </ul>
+                <p><strong>Experienced in Programming Languages: JavaScript, HTML5, CSS</strong></p>
+                <p><strong>Experienced with Version Control using Git</strong></p>
+                <p><strong>Skilled in Code Editing with Visual Studio Code</strong></p>
+                <p><strong>Proficient in Command Line Tools and Scripting with Bash</strong></p>
+                <p><strong>Currently focusing on relational databases (PostgreSQL and Docker)</strong></p>
             </div>
             <div class="section-content projects" id="projects-content">
-                <h2>Projects</h2>
-                <p>Blog: <a href="https://medium.com/@ntuthukoS" target="_blank">My Journey To Becoming A Fullstack Web Developer</a></p>
+                <h2>My Blog</h2>
+                <a href="https://medium.com/@ntuthukoS" target="_blank">My Journey To Becoming A Fullstack Web Developer</a>
             </div>
-            <div class="section-content contacts" id="contacts-content">
-                <h2>Contacts</h2>
-                <p>LinkedIn: <a href="https://www.linkedin.com/in/ntuthuko-sokutu-449a44273/" target="_blank">My Profile</a></p>
-                <p>Resume: <a href="https://drive.google.com/file/d/1OfQ2TppSIjbUJeemfE7oD3ScxJHPg2Gq/view?usp=sharing" target="_blank">Ntuthuko Sokutu</a></p>
+            <div class="section-content resume" id="resume-content">
+                <h2>Resume</h2>
+                <p><a href="https://drive.google.com/file/d/1OfQ2TppSIjbUJeemfE7oD3ScxJHPg2Gq/view?usp=sharing" target="_blank">Ntuthuko Sokutu Resume</a></p>
             </div>
         </div>
     </main>
 
+    <div class="right-container">
+        <h2>Interactive Projects and Demos</h2>
+        <p>All interactive projects and demos will be presented here.</p>
+    </div>
+
     <footer>
         <p>&copy; 2023 Ntuthuko. All rights reserved.</p>
     </footer>
+
+    <script>
+        document.getElementById("send-button").addEventListener("click", function() {
+            const message = document.getElementById("help-text").value;
+            if (message) {
+                window.location.href = "mailto:ntuthuko.sokutu@umuzi.org?subject=Web Services Inquiry&body=" + message;
+            }
+        });
+    </script>
 </body>
 </html>
+
