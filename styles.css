@@ -27,6 +27,7 @@ header {
 
 header h1 {
     font-family: 'Lato', sans-serif;
+    text-align: center;
 }
 
 /* The navigation menu */
