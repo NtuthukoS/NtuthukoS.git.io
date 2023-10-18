@@ -14,7 +14,6 @@ body, h1, p, ul, li, a {
 body {
     font-family: "Lato", sans-serif;
     color: var(--clr-text);
-    overflow-x: hidden;
     background: linear-gradient(45deg, #784a57, #332429);
 }
 
@@ -23,7 +22,6 @@ header {
     color: var(--clr-bg);
     padding: 20px;
     text-align: center;
-    width: 100%;
 }
 
 header h1 {
@@ -32,9 +30,8 @@ header h1 {
 
 /* Main Container */
 .main-container {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    gap: 20px;
+    display: flex; /* Use a flex layout for main content */
+    flex-direction: column; /* Stack elements vertically */
     max-width: 1200px;
     margin: 20px;
     padding: 20px;
@@ -44,46 +41,23 @@ header h1 {
     overflow: hidden;
 }
 
-.center-panel {
+.center-panel, .left-panel {
     padding: 20px;
-    position: relative;
-    z-index: 1;
 }
 
-.left-panel {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    background-color: var(--clr-bg);
-    border-radius: 10px;
-}
+/* Responsive adjustments for smaller screens */
+@media (max-width: 500px) {
+    .main-container {
+        margin: 10px; /* Reduce margin for smaller screens */
+    }
 
-.circle {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border: 2px dashed var(--clr-primary-5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    position: relative;
-}
+    .center-panel, .left-panel {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
 
-#person-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.section-content {
-    font-size: 18px;
-    padding: 20px;
+    .section-content {
+        font-size: 16px; /* Reduce font size for smaller screens */
+    }
 }
 
 /* Social Icons */
