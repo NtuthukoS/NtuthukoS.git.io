@@ -11,6 +11,10 @@
 <body>
     <header>
         <h1>Ntuthuko Likhanyile Sokutu</h1>
+        <div class = "center-menu">
+        <button class="menu-button">Menu</button>
+        <button class="close-menu-button">Close</button>
+        </div>
     </header>
     <nav>
         <ul class="navigation-menu">
@@ -39,8 +43,8 @@
             </div>
         </div>
         <div class="center-panel">
-            <h2>About Me</h2>
             <div class="section-content about" id="about-content">
+                <h2>About Me</h2>
                 <p><strong>A full stack web development recruit with a penchant for learning new skills quickly and sharing that knowledge with my fellow team mates. All about the team rather than the individual. Great at making the right connections timeously.</strong></p>
             </div>
             <div class="section-content skills" id="skills-content">
@@ -78,6 +82,25 @@
                 window.location.href = "mailto:ntuthuko.sokutu@umuzi.org?subject=Web Services Inquiry&body=" + message;
             }
         });
+
+        const menu = document.querySelector(".navigation-menu")
+        const openMenu = document.querySelector(".menu-button")
+        const closeMenu = document.querySelector(".close-menu-button")
+        openMenu.addEventListener("click",() =>{
+            menu.style.display = "block"
+            closeMenu.style.display = "block"
+            openMenu.style.display = "none"
+        
+             
+        } );
+
+        closeMenu.addEventListener("click",() =>{
+            menu.style.display = "none"
+            closeMenu.style.display = "none"
+            openMenu.style.display = "block"
+        
+             
+        } );
     </script>
 </body>
 </html>

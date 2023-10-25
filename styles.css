@@ -20,9 +20,9 @@ body {
 header {
     background-color: var(--clr-text);
     color: var(--clr-bg);
-    padding: 20px;
+    padding: 2%;
     text-align: center;
-    width: 100%;
+    width: 96%;
 }
 
 header h1 {
@@ -34,33 +34,85 @@ header h1 {
 .navigation-menu {
     list-style: none;
     display: flex;
-    justify-content: center; 
-    background-color: var(--clr-text); 
-    padding: 10px 0; 
+    justify-content: center;
+    background-color: var(--clr-text);
+    padding: 10px 0;
 }
 
 .navigation-menu li {
-    margin: 0 20px; 
+    margin: 0 20px;
 }
 
 .navigation-menu a {
     text-decoration: none;
-    color: var(--clr-bg); 
+    color: var(--clr-bg);
     font-weight: bold;
     font-size: 18px;
-    transition: color 0.2s; 
+    transition: color 0.2s;
+}
+.center-menu{
+    display: none;
+}
 
+/* Add a responsive collapsible menu for smaller screens */
+@media (max-width: 600px) {
+    .navigation-menu {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .navigation-menu li {
+        margin: 10px 0;
+    }
+
+    /* Add a menu button for smaller screens */
+    .menu-button {
+        display: block;
+        text-align: center;
+        cursor: pointer;
+        justify-content: center;
+    
+    }
+    .close-menu-button {
+        display: none;
+        text-align: center;
+        cursor: pointer;
+        justify-content: center;
+    
+    }
+    .center-menu{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 15px;
+
+    }
+
+
+
+    .menu-content {
+        display: none;
+    }
+
+    .menu-button.active + .menu-content {
+        display: block;
+    }
+
+    .navigation-menu a {
+        color: var(--clr-bg);
+    }
 }
 
 .navigation-menu a:hover {
-    color: var(--clr-primary-5); 
+    color: var(--clr-primary-5);
 }
-
 
 /* Main Container */
 .main-container {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: row;
     gap: 20px;
     max-width: 100%;
     margin: 20px;
@@ -75,13 +127,13 @@ header h1 {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
 }
 
 .left-panel {
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
     padding: 20px;
     background-color: var(--clr-bg);
     border-radius: 10px;
@@ -94,7 +146,7 @@ header h1 {
     border: 2px dashed var(--clr-primary-5);
     display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
     overflow: hidden;
     position: relative;
 }
@@ -112,7 +164,7 @@ header h1 {
 .section-content {
     font-size: 16px;
     padding: 20px;
-    text-align: center; 
+    text-align: center;
 }
 
 /* Social Icons */
@@ -137,16 +189,16 @@ header h1 {
 .help-box h2 {
     font-size: 18px;
     margin-bottom: 10px;
-    text-align: center; 
+    text-align: center;
 }
 
 textarea {
-    width: 100%;
-    padding: 10px;
+    width: 96%;
+    padding: 2%;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
-    text-align: center; 
+    text-align: center;
 }
 
 #send-button {
@@ -159,7 +211,7 @@ textarea {
     cursor: pointer;
     margin-top: 10px;
     display: block;
-    margin: 0 auto; 
+    margin: 0 auto;
 }
 
 #send-button:hover {
@@ -186,13 +238,40 @@ footer {
     width: 100%;
 }
 
-/* Media Query for Mobile */
-@media (min-width: 768px) {
+/* Media Query for Smaller Screens */
+@media (max-width: 600px) {
+    body{
+        width: 100%;
+        overflow-x: hidden;
+    }
+    header{
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0 ;
+        overflow-x: hidden;
+    }
     .main-container {
-        grid-template-columns: 1fr 3fr;
+        margin-left: 0 ;
+        margin-right: 0;
+        display: flex;
+        flex-direction: column;
     }
 
     .right-container {
-        max-width: 600px;
+        max-width: 100%;
+        flex-direction: column;
+
+    }
+
+    .section-content.about {
+        text-align: center;
+        font-size: 16px;
+        margin: 10px 0;
+        padding: 10px 5px;
+    }
+
+    .section-content.about h2 {
+        font-size: 18px;
+        margin-bottom: 2px;
     }
 }
