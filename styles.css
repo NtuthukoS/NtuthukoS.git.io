@@ -36,6 +36,9 @@ nav {
     top: 0;
     background-color: var(--clr-text);
     z-index: 100;
+    opacity: 0.25;
+    
+    
 }
 
 .navigation-menu {
@@ -46,6 +49,7 @@ nav {
     padding: 10px 0;
     position: sticky;
     top: 0;
+    
 }
 
 .navigation-menu li {
