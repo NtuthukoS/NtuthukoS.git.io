@@ -12,7 +12,10 @@
     <header>
         <h1>Ntuthuko Likhanyile Sokutu</h1>
         <div class="center-menu">
-            <button class="menu-button">Menu</button>
+            <button class="menu-button">
+                <i class="fas fa-bars"></i> 
+            </button>
+            
             <button class="close-menu-button">Close</button>
         </div>
     </header>
@@ -78,35 +81,46 @@
 
     <script>
         document.getElementById("send-button").addEventListener("click", function() {
-            const message = document.getElementById("help-text").value;
-            if (message) {
-                window.location.href = "mailto:ntuthuko.sokutu@umuzi.org?subject=Web Services Inquiry&body=" + message;
-            }
-        });
+    const message = document.getElementById("help-text").value;
+    if (message) {
+        window.location.href = "mailto:ntuthuko.sokutu@umuzi.org?subject=Web Services Inquiry&body=" + message;
+    }
+});
 
-        const menu = document.querySelector(".navigation-menu");
-        const openMenu = document.querySelector(".menu-button");
-        const closeMenu = document.querySelector(".close-menu-button");
-        openMenu.addEventListener("click", () => {
-            menu.style.display = "block";
-            closeMenu.style.display = "block";
-            openMenu.style.display = "none";
-        });
+const menu = document.querySelector(".navigation-menu");
+const openMenu = document.querySelector(".menu-button");
+const closeMenu = document.querySelector(".close-menu-button");
+const menuItems = document.querySelectorAll(".navigation-link");
 
-        closeMenu.addEventListener("click", () => {
-            menu.style.display = "none";
-            closeMenu.style.display = "none";
-            openMenu.style.display = "block";
-        });
+openMenu.addEventListener("click", () => {
+    menu.style.display = "block";
+    closeMenu.style.display = "block";
+    openMenu.style.display = "none";
+});
 
-        document.getElementById("go-to-top").addEventListener("click", function(event) {
-            event.preventDefault();
-            // Scroll to the top of the page smoothly
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth",
-            });
-        });
+closeMenu.addEventListener("click", () => {
+    menu.style.display = "none";
+    closeMenu.style.display = "none";
+    openMenu.style.display = "block";
+});
+
+
+menuItems.forEach((menuItem) => {
+    menuItem.addEventListener("click", () => {
+        menu.style.display = "none";
+        closeMenu.style.display = "none";
+        openMenu.style.display = "block";
+    });
+});
+
+document.getElementById("go-to-top").addEventListener("click", function(event) {
+    event.preventDefault();
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+    });
+});
+
     </script>
 </body>
 </html>
