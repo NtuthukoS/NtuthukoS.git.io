@@ -122,7 +122,7 @@ nav {
 }
 
 .navigation-menu a:hover {
-    color: var(--clr-primary-5);
+    color: rgb(198, 228, 3);
 }
 
 
