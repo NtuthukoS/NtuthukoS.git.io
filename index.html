@@ -91,6 +91,7 @@ const menu = document.querySelector(".navigation-menu");
 const openMenu = document.querySelector(".menu-button");
 const closeMenu = document.querySelector(".close-menu-button");
 const menuItems = document.querySelectorAll(".navigation-link");
+const viewport = window.innerWidth
 
 openMenu.addEventListener("click", () => {
     menu.style.display = "block";
@@ -104,14 +105,21 @@ closeMenu.addEventListener("click", () => {
     openMenu.style.display = "block";
 });
 
-
 menuItems.forEach((menuItem) => {
     menuItem.addEventListener("click", () => {
-        menu.style.display = "none";
+        const viewport = window.innerWidth
+        if (viewport <= 600) {
+            menu.style.display = "none"
+            closeMenu.style.display = "none";
+            openMenu.style.display = "block"; 
+        } else {
+        menu.style.display = "flex";
         closeMenu.style.display = "none";
-        openMenu.style.display = "block";
+        openMenu.style.display = "block"; 
+        }
     });
 });
+
 
 document.getElementById("go-to-top").addEventListener("click", function(event) {
     event.preventDefault();

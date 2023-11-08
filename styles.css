@@ -33,7 +33,7 @@ header h1 {
 /* The navigation menu */
 nav {
     position: sticky;
-    top: 20px;
+    top: 0px;
     background-color: var(--clr-text);
     z-index: 100;
     opacity: 0.5;
