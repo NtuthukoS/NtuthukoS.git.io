@@ -40,11 +40,7 @@
                 <a href="mailto:ntuthuko.sokutu@umuzi.org"><i class="fas fa-envelope fa-2x"></i></a>
                 <a href="tel:+27662720653"><i class="fas fa-phone fa-2x"></i></a>
             </div>
-            <div class="help-box">
-                <h2>What Can I Help You With Today?</h2>
-                <textarea id="help-text" rows="4" placeholder="Specify the web services you need. I've got you. (e.g., web design, backend architecture, etc.)"></textarea>
-                <button id="send-button">Send</button>
-            </div>
+            
         </div>
         <div class="center-panel">
             <div class="section-content about" id="about-content">
@@ -81,12 +77,7 @@
     </footer>
 
     <script>
-        document.getElementById("send-button").addEventListener("click", function() {
-    const message = document.getElementById("help-text").value;
-    if (message) {
-        window.location.href = "mailto:ntuthuko.sokutu@umuzi.org?subject=Web Services Inquiry&body=" + message;
-    }
-});
+       
 
 const menu = document.querySelector(".navigation-menu");
 const openMenu = document.querySelector(".menu-button");
